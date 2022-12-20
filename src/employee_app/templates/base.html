@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ static('styles.css') }}">
+    <title>{% block title %}Employees{% endblock %}</title>
+</head>
+<body>
+<a href="{{ url('create_employee') }}">Create new employee</a>
+{% block content %} {% endblock %}
+</body>
+</html>

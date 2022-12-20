@@ -1,0 +1,6 @@
+database:
+  host: "db"
+  port: 5432
+  username: "employee_app"
+  password: "employee_app"
+  db_name: "employee_app"

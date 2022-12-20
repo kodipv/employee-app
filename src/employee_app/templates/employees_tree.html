@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% set title='Employees tree' %}
+{% block title %}Employees tree{% endblock %}
+
+{% block content %}
+<ul>
+{%- for id, employee in employees_tree.items() recursive %}
+    <li>{{ employee['full_name'] }}, {{ employee['position_name'] }}, {{ employee['monthly_rate'] }}
+
+    {%- if employee['subordinates'] -%}
+        <ul>{{ loop(employee['subordinates'].items()) }}</ul>
+    {%- endif %}</li>
+{%- endfor %}
+</ul>
+{% endblock %}
